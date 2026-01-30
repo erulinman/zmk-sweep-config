@@ -15,7 +15,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <220>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <150>;
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
@@ -55,8 +55,8 @@
         //│  1       │  2       │  3       │  4       │  5       │   │  6       │  7       │  8       │  9       │  0       │
             &kp N1     &kp N2     &kp N3     &kp N4     &kp N5         &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  F1      │  F2      │  F3      │  F4      │  F5      │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  F12     │
-            &kp F1     &kp F2     &kp F3     &kp F4     &kp F5         &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp F12
+        //│  F1      │  F2      │  F3      │  F4      │  F5      │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  '       │
+            &kp F1     &kp F2     &kp F3     &kp F4     &kp F5         &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp SQT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  F6      │  F7      │  F8      │  F9      │  F10     │   │  F11     │  `       │  ~       │  DEL     │  BSPC    │
             &kp F6     &kp F7     &kp F8     &kp F9     &kp F10        &kp F11    &kp GRAVE  &kp TILDE  &kp DEL    &kp BSPC
@@ -69,11 +69,11 @@
         left_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  TAB     │  ESC     │  #       │  $       │  %       │   │  ^       │  &       │  *       │  (       │  )       │
-            &kp TAB    &kp ESC    &kp HASH   &kp DLLR   &kp PRCNT      &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR   &kp RPAR
+        //│  ESC     │          │  #       │  $       │  %       │   │  ^       │  &       │  *       │  (       │  )       │
+            &kp ESC    &trans     &kp HASH   &kp DLLR   &kp PRCNT      &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR   &kp RPAR
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │  -       │  =       │  [       │  ]       │  \       │
-            &trans     &trans     &trans     &trans     &trans         &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT   &kp BSLH
+        //│  TAB     │          │          │          │          │   │  -       │  =       │  [       │  ]       │  \       │
+            &kp TAB    &trans     &trans     &trans     &trans         &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT   &kp BSLH
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │  _       │  +       │  {       │  }       │  |       │
             &trans     &trans     &trans     &trans     &trans         &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC   &kp PIPE
